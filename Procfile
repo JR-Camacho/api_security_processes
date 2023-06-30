@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn prediction_api_project.wsgi
