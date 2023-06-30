@@ -13,16 +13,16 @@ This module implements the API using Django REST Framework for the Security Proc
 1. Clone the Security Process repository:
 
    ```shell
-   git clone git@github.com:JR-Camacho/security_processes.git
+   git clone git@github.com:JR-Camacho/api_security_processes.git
    ```
 
 2. Navigate to the API module directory:
 
    ```shell
-   cd security_processes/api
+   cd api_security_processes
    ```
 
-3. Create a virtual environment (optional but recommended):
+3. Create a virtual environment:
 
    ```shell
    python3 -m venv venv
