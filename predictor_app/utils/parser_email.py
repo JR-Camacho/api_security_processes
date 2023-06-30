@@ -5,13 +5,13 @@ import ssl
 from html.parser import HTMLParser
 
 # Downlodad stopwords from nltl
-# try:
-#     _create_unverified_https_context = ssl._create_unverified_context
-# except AttributeError:
-#     pass
-# else:
-#     ssl._create_default_https_context = _create_unverified_https_context
-# nltk.download('stopwords')
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+nltk.download('stopwords')
 
 # Define MLStripper class inheriting from HTMLParser class
 
