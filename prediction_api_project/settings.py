@@ -131,3 +131,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #CORS
 CORS_ORIGIN_ALLOW_ALL = True
+
+ALLOWED_HOSTS = [
+   '*',
+   'https://spam-detection-api-52adf491e672.herokuapp.com',
+   'spam-detection-api-52adf491e672.herokuapp.com',
+   '127.0.0.1',
+]
