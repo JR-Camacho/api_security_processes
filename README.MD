@@ -64,8 +64,8 @@ This module implements the API using Django REST Framework for the Security Proc
 The following endpoints are available:
 
 - `POST /api/spam-detector`: With this enpoint you can make predictions. {email_text: ''} or {email_file: File}
+- `POST /api/malicious-url-detector`: With this enpoint you can make predictions. {url: ''}
 
-Please refer to the API documentation or code for detailed information about each endpoint.
 
 ## Directory Structure
 
