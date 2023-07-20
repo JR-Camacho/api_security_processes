@@ -31,10 +31,8 @@ def process_email(email, is_file=False):
     parse_email = parser.parse(email, is_file=is_file)
     joined_email = np.array(
         [" ".join(parse_email['subject']) + " ".join(parse_email['body'])])
-    print(parse_email)
     vectorize_email = ham_spam_vectorizer.transform(joined_email)
     return vectorize_email.toarray()
-
 
 def make_email_prediction(email, is_file=False):
     return ham_spam_model.predict(process_email(email, is_file=is_file))

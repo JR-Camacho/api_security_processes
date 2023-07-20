@@ -23,6 +23,16 @@ tld_mapping = {
     19: "jp"
 }
 
+def calculate_risk_level(pred_phishing, pred_spam, pred_malware):
+    if pred_phishing == 1 and pred_spam == 1 and pred_malware == 1:
+        return 3
+    elif pred_phishing + pred_spam + pred_malware >= 2:
+        return 2
+    elif pred_phishing + pred_spam + pred_malware == 1:
+        return 1
+    else:
+        return 0
+
 def extract_url_info(url):
     parsed_url = urlparse(url)
 
@@ -39,6 +49,7 @@ def extract_url_info(url):
     protocol = parsed_url.scheme if parsed_url.scheme else "No Protocol"
 
     url_info = {
+        "url": url,
         "domain_or_ip": domain_or_ip,
         "url_length": url_length,
         "symbol_count": symbol_count,
